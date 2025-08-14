@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+body {
+  padding: 30px;
+}
+
+.brand-header {
+  grid-area: header;
+}
+
+.nav-links {
+  grid-area: nav;
+}
+
+.story-1 {
+  grid-area: story-1;
+}
+
+.story-2 {
+  grid-area: story-2;
+}
+
+.story-3 {
+  grid-area: story-3;
+}
+
+.story-4 {
+  grid-area: story-4;
+}
+
+.story-5 {
+  grid-area: story-5;
+}
+
+.page {
+  display: grid;
+  grid-template-areas:
+    "header   header  header"
+    "nav      nav     nav"
+    "story-1  story-2 story-3"
+    "story-4  story-5 story-5";
+}
+
+/* .brand-header{
+  border: ;
+  } */
+
+.story {
+  padding: 10px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.story-3,
+.story-5 {
+  border-right: 3px solid black;
+}
+
+.brand {
+  font-family: "Dancing Script";
+  font-size: 60px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  border: 3px solid black;
+  margin: 0px;
+  padding: 30px;
+}
+
+.section-link {
+  color: rgb(45, 45, 45);
+  font-size: 25px;
+  text-decoration: none;
+  position: relative;
+}
+
+.section-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.section-link:hover::after {
+  width: 100%;
+}
+
+.article-heading {
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.article-img {
+  display: block;
+  margin: 0 auto;
+  height: 275px;
+  border-radius: 3px;
+}
+
+.article-img:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.article-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px auto;
+  padding: 0 15px;
+  text-align: justify;
+}
